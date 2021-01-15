@@ -248,6 +248,56 @@ export const csCZ: Localization = {
   },
 };
 
+export const deCH: Localization = {
+  props: {
+    MuiBreadcrumbs: {
+      expandText: 'Pfad anzeigen',
+    },
+    MuiTablePagination: {
+      backIconButtonText: 'Nächste Seite',
+      labelRowsPerPage: 'Zeilen pro Seite:',
+      labelDisplayedRows: ({ from, to, count }) =>
+        `${from}-${to} von ${count !== -1 ? count : `mehr als ${to}`}`,
+      nextIconButtonText: 'Nächste Seite',
+    },
+    MuiRating: {
+      getLabelText: (value) => `${value} ${value !== 1 ? 'Sterne' : 'Stern'}`,
+      emptyLabelText: 'Keine Wertung',
+    },
+    MuiAutocomplete: {
+      clearText: 'Leeren',
+      closeText: 'Schliessen',
+      loadingText: 'Wird geladen…',
+      noOptionsText: 'Keine Optionen',
+      openText: 'Öffnen',
+    },
+    MuiAlert: {
+      closeText: 'Schliessen',
+    },
+    MuiPagination: {
+      'aria-label': 'Navigation via Seitennummerierung',
+      getItemAriaLabel: (type, page, selected) => {
+        if (type === 'page') {
+          return `${selected ? '' : 'Gehe zu '}Seite ${page}`;
+        }
+        if (type === 'first') {
+          return 'Zur ersten Seite';
+        }
+        if (type === 'last') {
+          return 'Zur letzten Seite';
+        }
+        if (type === 'next') {
+          return 'Zur nächsten Seite';
+        }
+        if (type === 'previous') {
+          return 'Zur vorherigen Seite';
+        }
+        return undefined;
+      },
+    },
+  },
+};
+
 export const deDE: Localization = {
   props: {
     MuiBreadcrumbs: {
